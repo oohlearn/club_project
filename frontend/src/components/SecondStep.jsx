@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Col, Row, Card, Divider, Space, Flex, Button, Select, ConfigProvider } from "antd";
 
 import { Link } from "react-router-dom";
-import Shop from "../pages/front/Shop/ShopPage";
 
 const selectOptions = Array.from({ length: 11 }, (_, i) => ({ value: i, label: i }));
 

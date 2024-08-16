@@ -1,22 +1,22 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/front/Homepage/Home";
-import FrontLayout from "./pages/front/FontLayout";
-import IntroPage from "./pages/front/Intro/Intro";
-import Activities from "./pages/front/Activities/ActivitiesPage";
-import ActivityTicket from "./pages/front/Activities/ActivityTicket";
-import IntroHome from "./pages/front/Intro/IntroHome";
-import ExperiencesPage from "./pages/front/Intro/Experiences";
-import Conductors from "./pages/front/Intro/Conductors";
-import Teachers from "./pages/front/Intro/Teachers";
-import Videos from "./pages/front/Videos/VideosPage";
-import Albums from "./pages/front/Albums/AlbumsPage";
-import AlbumDetail from "./pages/front/Albums/AlbumDetail";
-import News from "./pages/front/News/News";
-import NewsDetail from "./pages/front/News/NewsDetail";
-import Contact from "./pages/front/Contact";
-import Shop from "./pages/front/Shop/ShopPage";
-import ChooseSeats from "./pages/front/Order/ChooseSeats";
-import Checkout from "./pages/front/Shop/Checkout";
+import Home from "./pages/Homepage/Home";
+import FrontLayout from "./pages/FontLayout";
+import IntroPage from "./pages/Intro/Intro";
+import Activities from "./pages/Activities/ActivitiesPage";
+import ActivityTicket from "./pages/Activities/ActivityTicket";
+import IntroHome from "./pages/Intro/IntroHome";
+import ExperiencesPage from "./pages/Intro/Experiences";
+import Conductors from "./pages/Intro/Conductors";
+import Teachers from "./pages/Intro/Teachers";
+import Videos from "./pages/Videos/VideosPage";
+import Albums from "./pages/Albums/AlbumsPage";
+import AlbumDetail from "./pages/Albums/AlbumDetail";
+import News from "./pages/News/News";
+import NewsDetail from "./pages/News/NewsDetail";
+import Contact from "./pages/Contact";
+import Shop from "./pages/Shop/ShopPage";
+import ChooseSeats from "./pages/Order/ChooseSeats";
+import Checkout from "./pages/Shop/Checkout";
 
 function App() {
   return (

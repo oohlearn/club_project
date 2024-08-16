@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, Form, Input, Row, Select, Col, Flex, Divider, Radio, Space, Checkbox } from "antd";
 import styled from "styled-components";
-import AddressSelect from "../pages/front/Order/Address";
-import PolicyModal from "../pages/front/Order/PolicyModal";
+import AddressSelect from "../pages/Order/Address";
+import PolicyModal from "../pages/Order/PolicyModal";
 
 // const layout = {
 //   labelCol: {
