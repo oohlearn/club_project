@@ -25,11 +25,28 @@ class ActivityAdmin(admin.ModelAdmin):
     list_editable = ("date", "price_type", "place")
 
 
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ("title", "date",)
+    search_fields = ("title",)
+
+
+class ExperienceAdmin(admin.ModelAdmin):
+    list_display = ("date", "experience")
+
+
+class TeacherAdmin(admin.ModelAdmin):
+    list_display = ("group", "name")
+
+
+class VideoAdmin(admin.ModelAdmin):
+    list_display = ("title", "date", "place", "performer")
+
+
 # Register your models here.
-admin.site.register(Video)
-admin.site.register(Article)
+admin.site.register(Video, VideoAdmin)
+admin.site.register(Article, ArticleAdmin)
 admin.site.register(Activity, ActivityAdmin)
-admin.site.register(Teacher)
+admin.site.register(Teacher, TeacherAdmin)
 admin.site.register(IndexStory)
-admin.site.register(Experience)
+admin.site.register(Experience, ExperienceAdmin)
 admin.site.register(Album)

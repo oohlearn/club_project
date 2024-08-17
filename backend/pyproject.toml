@@ -11,6 +11,8 @@ django = "^5.1"
 django-cors-headers = "^4.4.0"
 djangorestframework = "^3.15.2"
 pillow = "^10.4.0"
+pip = "^24.2"
+django-taggit = "^6.0.0"
 
 
 [build-system]

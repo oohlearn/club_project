@@ -60,6 +60,7 @@ class IndexStoryViewSet(viewsets.ModelViewSet):
     serializer_class = IndexStorySerializer
 
     def get_queryset(self):
+        queryset = IndexStory.objects.all()
         id = self.request.query_params.get('id')
         if id is not None:
             queryset = IndexStory.objects.filter(id=id)

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Video, Activity, Album, Teacher, Experience, IndexStory, Article
+from taggit.serializers import (TagListSerializerField, TaggitSerializer)
 
 
 # Videos
@@ -9,7 +10,7 @@ class VideoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Video
-        fields = ["id", "title", "date", "performer",
+        fields = ["id", "title", "date", "performer", "tags"
                   "place", "description", "url", "embed_url", "image"]
 
 
@@ -24,11 +25,6 @@ class TicketSerializer(serializers.Serializer):
     ticket_type = serializers.CharField(max_length=500)
     price = serializers.IntegerField()
     description = serializers.CharField(max_length=1000)
-
-
-# TODO 改使用第三方庫：django-taggit，它專門用於處理標籤。
-class TagSerializer(serializers.Serializer):
-    tag = serializers.CharField(max_length=500)
 
 
 class ActivitySerializer(serializers.ModelSerializer):
@@ -53,6 +49,7 @@ class TeacherSerializer(serializers.ModelSerializer):
 # 相簿
 class AlbumSerializer(serializers.ModelSerializer):
     image = serializers.ImageField(max_length=None, use_url=True)
+    tags = TagListSerializerField()
 
     class Meta:
         model = Album
@@ -78,9 +75,8 @@ class ExperienceSerializer(serializers.ModelSerializer):
 # 文章
 class ArticleSerializer(serializers.ModelSerializer):
     article_img = serializers.ImageField(max_length=None, use_url=True)
-    # tag = TagSerializer(many=True)
-    tag = serializers.ListField(child=serializers.CharField())
+    tags = TagListSerializerField()
 
     class Meta:
         model = Article
-        fields = ["title", "date", "content", "tag", "article_img"]
+        fields = ["title", "date", "content", "tags", "article_img"]
